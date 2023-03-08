@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 94.0
+margin_top = 52.0
+margin_right = 144.0
+margin_bottom = 91.0
+text = "ok"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 103.0
+margin_top = 155.0
+margin_right = 168.0
+margin_bottom = 214.0
+text = "ok"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 104.0
+margin_top = 258.0
+margin_right = 170.0
+margin_bottom = 318.0
+text = "ok"
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 121.0
+margin_top = 364.0
+margin_right = 184.0
+margin_bottom = 425.0
+text = "ok"
+
+[node name="resultado1" type="Label" parent="."]
+margin_left = 163.0
+margin_top = 56.0
+margin_right = 256.0
+margin_bottom = 90.0
+
+[node name="resultado2" type="Label" parent="."]
+margin_left = 279.0
+margin_top = 168.0
+margin_right = 378.0
+margin_bottom = 210.0
+
+[node name="resultado3" type="Label" parent="."]
+margin_left = 277.0
+margin_top = 273.0
+margin_right = 362.0
+margin_bottom = 308.0
+
+[node name="resultado4" type="Label" parent="."]
+margin_left = 286.0
+margin_top = 372.0
+margin_right = 378.0
+margin_bottom = 408.0
+
+[node name="texto" type="TextEdit" parent="."]
+margin_left = 9.0
+margin_top = 157.0
+margin_right = 90.0
+margin_bottom = 207.0
+
+[node name="texto 2" type="TextEdit" parent="."]
+margin_left = 8.0
+margin_top = 379.0
+margin_right = 101.0
+margin_bottom = 421.0
+text = "marina"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
