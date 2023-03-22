@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://enemy spamer.gd" type="Script" id=1]
+
+[node name="enemy spamer" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="spampositions" type="Node2D" parent="."]
+
+[node name="spamer position" type="Position2D" parent="spampositions"]
+position = Vector2( 70, 0 )
+
+[node name="spamer position2" type="Position2D" parent="spampositions"]
+position = Vector2( 180, 0 )
+
+[node name="spamer position3" type="Position2D" parent="spampositions"]
+position = Vector2( 270, 0 )
+
+[node name="spamer position4" type="Position2D" parent="spampositions"]
+position = Vector2( 345, 0 )
+
+[node name="spamer position5" type="Position2D" parent="spampositions"]
+position = Vector2( 400, 0 )
+scale = Vector2( 1.29846, 1 )
+
+[node name="Timer" type="Timer" parent="."]

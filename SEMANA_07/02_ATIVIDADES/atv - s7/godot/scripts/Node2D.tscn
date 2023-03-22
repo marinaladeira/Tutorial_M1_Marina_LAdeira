@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://kaos-ren-space.jpg" type="Texture" id=2]
+[ext_resource path="res://scripts/foguete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/asteroides.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/laser.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Node2D.gd" type="Script" id=6]
+
+[node name="cena 1" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Kaos-ren-space" type="Sprite" parent="."]
+position = Vector2( 172, 299 )
+scale = Vector2( 0.406435, 0.374453 )
+texture = ExtResource( 2 )
+
+[node name="foguete" parent="." instance=ExtResource( 3 )]
+position = Vector2( 187, 516 )
+
+[node name="laser" parent="foguete" instance=ExtResource( 5 )]
+position = Vector2( 18, -78 )
+
+[node name="asteroides6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 280, -239 )
+
+[node name="asteroides" parent="asteroides6" instance=ExtResource( 4 )]
+position = Vector2( -341.745, -49.138 )
+
+[node name="asteroides2" parent="asteroides6" instance=ExtResource( 4 )]
+position = Vector2( -500.132, 165.809 )
+
+[node name="asteroides3" parent="asteroides6" instance=ExtResource( 4 )]
+position = Vector2( -336.215, 177.089 )
+
+[node name="asteroides4" parent="asteroides6" instance=ExtResource( 4 )]
+position = Vector2( -159.388, 64.2291 )
+
+[node name="asteroides5" parent="asteroides6" instance=ExtResource( 4 )]
+position = Vector2( 68.0074, -143.944 )
+
+[node name="asteroides7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 122, -224 )
+
+[node name="pontos" type="Label" parent="."]
+margin_left = 6.0
+margin_top = 13.0
+margin_right = 109.0
+margin_bottom = 65.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 11.0
+autostart = true
+
+[connection signal="detruido" from="asteroides6/asteroides" to="." method="_on_asteroides_detruido"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

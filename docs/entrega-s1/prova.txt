@@ -1,0 +1,74 @@
+17 - L = V - C 
+V(x)= 30x - 6x^2
+C(x)=x^3+3x^2+9x+15
+   V´(x)= -12x + 30
+   C´(x)= 3x^2 + 6x + 9
+L´(x)= V´(x) - C´(x)
+L´(x)=  -12x + 30 - 3x^2 - 6x - 9
+L´(x)=  - 3x^2 - 18x +21
+L´(x)= -3 (x^2 + 6x - 7)
+
+18- a.b = |a||b|.cos x
+2.(-4) = 2.4.cos x
+cos x = -1 
+x = 180°
+
+19- var m1 = ()
+var m2 = () #variaveis peso da melancia 
+var m3 = ()
+var p1 #variaveis do pódio
+var p2 
+var p3 
+
+func _ready: #inicia a função 
+     lista.append[p1, p2, p3] #cria uma lista com as posições do pódio
+     if m1>m2 and m1>m3 and m2> m3: #compara as melancias 
+          p1 = m1 
+          p2 = m2 #substitui os valores do pódio pelas melancias de acordo com o peso
+          p3 = m3 
+       print(lista.append) #imprime a lista com os valores em ordem 
+     elif m1<m2 and m1<m3 and m2<m3 #caso o item anterior não seja verdadeiro realiza essa operação
+          p1 = m3 
+          p2 = m2 
+          p3 = m1
+       print(lista.append)
+    else
+      return false 
+
+   if m2>m3 and m2>m1 and m1> m3: #repete o código mudando o tipo de comparação para encontrar a ordem correta 
+          p1 = m2
+          p2 = m1 
+          p3 = m3 
+       print(lista.append)
+     elif m2<m3 and m2<m1 and m1<m3 
+          p1 = m3 
+          p2 = m1
+          p3 = m2
+       print(lista.append)
+    else
+      return false 
+
+    if m2>m1 and m2>m3 and m3> m1:
+          p1 = m2 
+          p2 = m3
+          p3 = m1 
+       print(lista.append)
+     elif m2<m1 and m2<m3 and m3<m1 
+          p1 = m1
+          p2 =  m3
+          p3 = m2 
+       print(lista.append)
+    else
+      return false 
+    
+    
+20-  ehBissexto()
+   var ano #cria variavel do ano 
+   if ano%400 == 0: #se o ano for divisivel por 400
+       if (ano - 100)%4 = 1 #e 100 anos antes não foi ano bissexto
+          if ano%4 == 0: #e o ano é divisivel por 4
+                print (ano, 'é bissexto´) #então o ano é bissexto
+   else false #caso contrário o programa retornará false 
+        else false
+           else false 
+
